@@ -42,3 +42,13 @@ padding: 0;
 .botao{
     background-color: azure;
 }
+
+.textologin{
+    text-align: center;
+    background-color: cadetblue;
+}
+
+.formulario2{
+    background-color: azure;
+    text-align: center;
+}
