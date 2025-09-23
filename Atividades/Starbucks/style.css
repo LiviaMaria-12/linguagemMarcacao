@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --cor-verde-starbucks: #0b421a;
+    --cor-marrom-letra: #362415;
+    --cor-cinza: #604c4c;
+    --cor-fundo: #f7f7f7;
+}
+
+.body{
+    font-family: 'open sans', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-marrom-letra);
+}
+
+.cabecalho{
+    background-color: var(--cor-fundo);
+    padding: 15px 0;
+    border-bottom: 1px solid var(--cor-cinza);
+    box-shadow: 0 1px 4px var(--cor-cinza);
+}
+
+.logo{
+    height: 7vh;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegacao{
+    display: flex;
+    gap: 20px;
+}
+
+.item{
+    text-decoration: none;
+    color: var(--cor-marrom-letra);
+    font-weight: 700;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+    font-size: 1.2rem;
+}
+
+.item:focus,
+.item:hover{
+    color: rgb(0, 99, 0);
+    border-bottom-color: var(--cor-verde-starbucks);
+}
+
+.buscar-loja{
+    padding: 10px;
+    background-color: var(--cor-fundo);
+    border: none;
+    color: var(--cor-marrom-letra);
+    font-size: 1rem;
+}
+.botao-entrar{
+    background-color: var(--cor-fundo);
+    color: var(--cor-verde-starbucks);
+    border: 2px solid var(--cor-verde-starbucks);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.botao-entrar:hover{
+    color: var(--cor-fundo);
+    background-color: var(--cor-verde-starbucks);
+}
+
+.botao-participe{
+    background-color: var(--cor-verde-starbucks);
+    color: var(--cor-fundo);
+    border: 2px solid var(--cor-verde-starbucks);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.botao-participe:hover{
+    color: var(--cor-verde-starbucks);
+    background-color: var(--cor-fundo);
+    border: 2px solid var(--cor-verde-starbucks);
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.img{
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+}
