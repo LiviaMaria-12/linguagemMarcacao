@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* Apliquei em todo o documento fonye, cor e cor fundo */
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 238, 241);
+}
+
+.cabecalho{
+background-color: #000000;
+padding: 15px 0;
+}
+
+.logo{
+    height: 15vh;
+}
+
+.container{
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    font-size: larger;
+}
+
+.cadastro{
+    display: flex;
+    gap: 1.5rem;
+}
+.cadastro button{
+    background-color: pink;
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: large;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.cadastro button:hover{
+    background-color: white;
+    color: pink;
+}
+
+.item{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    padding: 8px 0;
+    border-bottom: 3px solid transparent;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item:hover{
+    color: #000000;
+    background-color: pink;
+    border-radius: 25px;
+    padding: 6px;
+}
+
+
+
