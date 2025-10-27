@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Online</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">
+    
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Calculadora Online</h1>
+        <div class="space-y-6 flex justify-center items-center">
+
+            <div class="flex flex-col sm:flex-col gap-4 justify-center items-center" >
+
+                <button onclick="botaoSomar()" class="w-full bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg
+                 hover:bg-purple-600 transition duration-200 ease-in-out flex justify-center 
+                 items-center">Clique aqui para somar!</button>
+
+                <button onclick="botaoSubtrair()" class="w-full bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg
+                 hover:bg-purple-600 transition duration-200 ease-in-out flex justify-center 
+                 items-center">Clique aqui para subtrair!</button>
+
+                <button onclick="botaoMultiplicar()" class="w-full bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg
+                 hover:bg-purple-600 transition duration-200 ease-in-out flex justify-center 
+                 items-center">Clique aqui para multiplicar!</button>
+
+                <button onclick="botaoDividir()" class="w-full bg-purple-500 text-white font-semibold py-2 px-4 rounded-lg
+                 hover:bg-purple-600 transition duration-200 ease-in-out flex justify-center 
+                 items-center">Clique aqui para dividir!</button>
+
+            <p id="resultado" class="bg-gray-100 p-4 rounded-md text-gray-700 
+                min-h-[50px] border-gray-200 flex justify-center items-center ">Aqui exibiremos nosso resultado</p>
+            </div>
+            <div></div>
+        </div>
+        
+    </div>
+
+    <script>
+    function botaoSomar(){
+        var n1 = Number(prompt("Digite aqui um número:"));
+        var n2 = Number(prompt("Digite outro número:"));
+        document.getElementById("resultado").innerHTML +=
+        `<br> A soma dos números ${n1} + ${n2} = ${n1 + n2}`
+    }
+
+    function botaoSubtrair(){
+        var n1 = Number(prompt("Digite aqui um número:"));
+        var n2 = Number(prompt("Digite outro número:"));
+        document.getElementById("resultado").innerHTML +=
+        `<br> A subtração dos números ${n1} - ${n2} = ${n1 - n2}`
+    }
+
+    function botaoMultiplicar(){
+        var n1 = Number(prompt("Digite aqui um número:"));
+        var n2 = Number(prompt("Digite outro número:"));
+        document.getElementById("resultado").innerHTML +=
+        `<br> A multiplicação dos números ${n1} X ${n2} = ${n1 * n2}`
+    }
+
+    function botaoDividir(){
+        var n1 = Number(prompt("Digite aqui um número:"));
+        var n2 = Number(prompt("Digite outro número:"));
+        document.getElementById("resultado").innerHTML +=
+        `<br> A divisão dos números ${n1} / ${n2} = ${n1 / n2}`
+    }
+    </script>
+
+</body>
+</html>
