@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placar Eletrônico</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Defer carrega por último -->
+    <script defer src="./script.js"></script> 
+</head>
+<body class="bg-gray-800 text-white flex flex-col items-center justify-center p-4">
+    <header class="mb-8 text-center"> 
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-400 mt-12 ">Placar Eletrônico</h1>
+    </header>
+
+    <section class="bg-gray-900 text-white flex rounded-lg shadow-2xl items-center 
+    justify-around p-10 gap-60 mt-20">
+        <div class="text-center flex flex-col items-center">
+            <p class="text-2xl font-semibold mb-2">Casa</p>
+            <p id="pt1" class="text-6xl font-bold text-yellow-400 mb-4">0</p>
+            <button onclick="ponto1()" class="bg-blue-500 text-white rounded-lg 
+             hover:bg-blue-700 p-3">Gol</button>
+
+            <button onclick="zerar1()" class="bg-white text-black rounded-lg 
+             hover:bg-gray-300 mt-3 p-3">Zerar</button>
+
+            <button onclick="diminuir1()" class="bg-red-600 text-white rounded-lg 
+             hover:bg-red-700 mt-3 p-3">-1</button>
+        </div>
+
+        <div class="text-center flex flex-col items-center">
+            <p class="text-2xl font-semibold mb-2">Visitante</p>
+            <p id="pt2" class="text-6xl font-bold text-yellow-400 mb-4">0</p>
+            <button onclick="ponto2()" class="bg-blue-500 text-white rounded-lg p-3 hover:bg-blue-700">Gol</button>
+            
+            
+            <button onclick="zerar2()" class="bg-white text-black rounded-lg 
+             hover:bg-gray-300 mt-3 p-3">Zerar</button>
+
+            <button onclick="diminuir2()" class="bg-red-600 text-white rounded-lg 
+             hover:bg-red-700 mt-3 p-3">-1</button>
+
+        </div>
+    </section>
+    
+    <!-- BASQUETE -->
+    <section class="bg-gray-900 text-white flex rounded-lg shadow-2xl items-center 
+    justify-around p-10 gap-60 mt-20">
+        <div class="text-center flex flex-col items-center">
+            <p class="text-2xl font-semibold mb-2">Casa</p>
+            <p id="ct1" class="text-6xl font-bold text-yellow-400 mb-4">0</p>
+
+            <div class="flex flex-row items-center gap-1 justify-around mt-3">
+            <button onclick="pontobasquete1(1)" class="bg-blue-500 text-white rounded-lg 
+             hover:bg-blue-700 p-3">+1</button>
+
+            <button onclick="pontobasquete1(2)" class="bg-white text-black rounded-lg 
+             hover:bg-gray-300 p-3">+2</button>
+
+            <button onclick="pontobasquete1(3)" class="bg-red-600 text-white rounded-lg 
+             hover:bg-red-700 p-3">+3</button>
+
+             <button onclick="zerarTudo1()" class="bg-purple-500 text-white rounded-lg 
+             hover:bg-purple-600 p-3">Zerar</button>
+            </div>
+
+        </div>
+
+        <div class="text-center flex flex-col items-center">
+            <p class="text-2xl font-semibold mb-2">Visitante</p>
+            <p id="ct2" class="text-6xl font-bold text-yellow-400 mb-4">0</p>
+
+            <div class="flex flex-row items-center gap-1 justify-around mt-3">
+            <button onclick="pontobasquete2(1)" class="bg-blue-500 text-white rounded-lg 
+             hover:bg-blue-700 p-3">+1</button>
+
+            <button onclick="pontobasquete2(2)" class="bg-white text-black rounded-lg 
+             hover:bg-gray-300 p-3">+2</button>
+
+            <button onclick="pontobasquete2(3)" class="bg-red-600 text-white rounded-lg 
+             hover:bg-red-700 p-3">+3</button>
+
+             <button onclick="zerarTudo2()"  class="bg-purple-500 text-white rounded-lg 
+             hover:bg-purple-600 p-3">Zerar</button>
+            </div>
+
+        </div>
+        
+    </section>
+    
+</body>
+</html>
