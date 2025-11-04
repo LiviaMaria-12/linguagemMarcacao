@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Douçuras da Liv</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script defer src="./script.js"></script> 
+    <link rel="stylesheet" href="./style.css">
+
+
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex justify-between">
+            <img class="h-12 w-12" src="https://images.vexels.com/media/users/3/240279/isolated/svg/783700c246407f8fd9438683c72ca39c.svg" alt="">
+            <a href="" class="text-2xl font-bold text-pink-600 m-2">Douçuras da Liv</a>
+            </div>
+            <div class="hidden md:flex space-x-6 items-center">
+                
+                     <a href="" class="text-gray-400 hover:text-pink-600">🏠Principal</a>
+                     <a href="" class="text-gray-400 hover:text-pink-600">⭐Favoritos</a>
+                     <a href="" class="text-gray-400 hover:text-pink-600">💳Promoções</a>
+
+                <div class="relative">
+                    <!-- Menu  -->
+                     <button id="gatilho-dropdown-web" class="flex items-center text-gray-400 hover:text-pink-600">
+                        👤Minha Conta
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                     </button>
+                     <div id="menu-dropdown-web" class="hidden absolute left-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1">
+                        <a href="" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Meus pedidos</a>
+                        <a href="" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Configuração</a> <hr class="text-gray-200">
+                        <a href="" onclick="botaoSair()" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Sair</a>
+                     </div>
+                </div>
+                
+            </div>
+                <button id="btn-hamburguer" class="md:hidden text-gray-600 focus:outline-none">
+                    <!-- Menu Hamburguer -->
+                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+                </button>
+        </nav>
+        <!-- Menu mobile -->
+        <div id="menu-mobile" class="hidden md:hidden bg-white shadow-lg">
+            <div>
+                <button id="gatilho-dropdown-mobile" class="w-full flex items-center justify-between text-gray-400 hover:text-blue-50 text-left px-6 py-3">
+                    Minha Conta
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </button>
+                <div id="menu-dropdown-mobile" class="hidden pl-8">
+                    <a href="" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Meus pedidos</a>
+                    <a href="" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Configuração</a>
+                    <a href="" onclick="botaoSair()" class="block px-4 py-2 text-sm text-gray-400 hover:bg-blue-50">Sair</a>
+                </div>
+            </div>
+            <a href="" class="text-gray-400 hover:text-pink-600">🏠Principal</a>
+            <a href="" class="text-gray-400 hover:text-pink-600">⭐Favoritos</a>
+            <a href="" class="text-gray-400 hover:text-pink-600">💳Promoções</a>
+        </div>
+    </header>   
+
+
+    <!-- Modal criar conta -->
+         <div id="modal-produto" class="modal-container">
+            <div class="modal-box">
+               <div class="modal-cabecalho flex justify-around items-center">
+                  <!-- Cabeçalho -->
+                   <h2 class="font-bold text-xl text-pink-700">Produto Indisponível</h2>
+                   <p>Desculpe, este item é apenas para demonstração.</p>
+                   <button type="submit" class="botao-criar">Entendido!</button>
+                   <a href="" class="fechar">&times;</a>
+               </div>
+            </div>
+         </div>
+
+
+
+    
+    <main class="container mx-auto mt-8">
+        <section class="relative w-full max-w-4xl mx-auto rounded-lg shadow-xl">
+            <div id="carrossel-container" class="overflow-hidden rounded-lg">
+                <div id="carrossel-slides" class="flex transition-transform duration-500 ease-in-out">
+
+                    <div class="slide-carrossel min-w-full h-100 text-white flex 
+                    items-center justify-center">
+                    <!-- DONUTS -->
+                    <img src="https://sabores-new.s3.amazonaws.com/public/2024/11/donuts-1024x494.jpg" alt="">
+                    </div>
+
+                    <div class="slide-carrossel min-w-full h-80 bg-pink-600 text-white flex 
+                    items-center justify-center">
+                    <!-- BOLOS -->
+                    <img src="https://www.assai.com.br/sites/default/files/como-funciona-assai-atacadista-aprenda-a-lucrar-com-bolos-banner-01.jpg" alt="">
+                    </div>
+
+                    <div class="slide-carrossel min-w-full h-80 bg-pink-500 text-white flex 
+                    items-center justify-center">
+                    <!-- CUPCAKES -->
+                    <img src="https://thecakesolution.co.uk/wp-content/uploads/2023/12/cupcakes-scaled.jpg" alt="">
+                    </div>
+
+                    <div class="slide-carrossel min-w-full h-80 bg-pink-500 text-white flex 
+                    items-center justify-center">
+                    <!-- PUDIM -->
+                    <img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/e33f558634f17b8197bd2ad4061cdaff.jpg" alt="">
+                    </div>
+
+                    <div class="slide-carrossel min-w-full h-80 bg-pink-500 text-white flex 
+                    items-center justify-center">
+                    <!-- TORTA DE LIMÃO -->
+                    <img src="https://www.receitasnestle.com.br/sites/default/files/srh_recipes/1d22d96039f98608bc9338debb1b4579.jpg" alt="">
+                    </div>
+                    
+                </div>
+            </div>
+            <button id="btn-anterior" class="absolute top-1/2 left-4 bg-white/50 hover:bg-white p-2
+            rounded-full shadow -translate-y-1/2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button id="btn-proximo" class="absolute top-1/2 right-4 bg-white/50 hover:bg-white p-2
+            rounded-full shadow -translate-y-1/2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </section>
+    </main>
+
+    <section>
+            <h1 class="font-bold text-4xl flex justify-center items-center mt-10">Recomendados</h1>
+            <p class="text-gray-500 flex justify-center items-center">Aproveite nossos melhores produtos</p>
+
+<div class="flex flex-col justify-center items-center">
+
+            <div class=" w-full max-w-7xl flex justify-center items-center rounded-lg shadow-xl bg-white
+                    flex-row mt-8">
+                <div class="m-9">
+                    <h1 class="font-bold text-2xl text-pink-700 flex justify-center
+                    items-center m-6">Tiramisu</h1>
+                    <p class="m-6">Uma clássica e mundialmente famosa sobremesa italiana de colher, conhecida por sua textura cremosa e pelo contraste entre o sabor suave do queijo mascarpone e o amargo do café e cacau.</p>
+                    <a href="#modal-produto"><button class="w-50 bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg
+                         hover:bg-pink-600 transition duration-200 ease-in-out ml-5">Saiba Mais</button></a>
+                </div>
+
+                <div>
+                    <img class="w-300 rounded-lg" src="https://receitadaboa.com.br/wp-content/uploads/2024/08/iStock-1398679790.jpg" alt="">
+                </div>
+            </div>
+
+            <div class=" w-full max-w-7xl flex justify-center items-center rounded-lg shadow-xl bg-white
+                    flex-row-reverse mt-8">
+                <div class="m-9">
+                    <h1 class="font-bold text-2xl text-pink-700 flex justify-center
+                        items-center m-6">Bolo de Chocolate com Nozes</h1>
+                    <p class="m-6">Uma sobremesa clássica e irresistível, que combina a riqueza e o sabor envolvente do cacau com a textura e o sabor característico das nozes. </p>
+                    <a href="#modal-produto"><button class="w-50 bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg
+                         hover:bg-pink-600 transition duration-200 ease-in-out ml-5">Saiba Mais</button></a>
+                </div>
+
+                <div>
+                    <img class="w-300 rounded-lg" src="https://www.shutterstock.com/image-photo/exquisite-slice-moist-chocolate-cake-600nw-2505449687.jpg" alt="">
+                </div>
+            </div>
+
+            <div class=" w-full max-w-7xl flex justify-center items-center rounded-lg shadow-xl bg-white
+                    flex-row mt-8">
+                <div class="m-9">
+                    <h1 class="font-bold text-2xl text-pink-700 flex justify-center
+                        items-center m-6">Torta de Frutas Vermelhas</h1>
+                    <p class="m-6">Uma sobremesa que se destaca por sua aparência sofisticada, cores vibrantes e um equilíbrio delicioso entre o doce e o levemente ácido. </p>
+                   <a href="#modal-produto"><button class="w-50 bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg
+                         hover:bg-pink-600 transition duration-200 ease-in-out ml-5">Saiba Mais</button></a>
+                    
+                </div>
+
+                <div>
+                    <img class="w-300 rounded-lg" src="https://i.ytimg.com/vi/0anAOj5CZL0/maxresdefault.jpg" alt="">
+                </div>
+            </div>
+
+            <div class=" w-full max-w-7xl flex justify-center items-center rounded-lg shadow-xl bg-white
+                    flex-row-reverse mt-8">
+                <div class="m-9">
+                    <h1 class="font-bold text-2xl text-pink-700 flex justify-center
+                        items-center m-6">Brownie Gourmet</h1>
+                    <p class="m-6">Uma sobremesa de chocolate densa e cremosa, de origem americana, que se assemelha a um bolo, mas sem fermento. </p>
+                    <a href="#modal-produto"><button class="w-50 bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg
+                         hover:bg-pink-600 transition duration-200 ease-in-out ml-5">Saiba Mais</button></a>
+                    
+                </div>
+
+                <div>
+                    <img class="w-300 rounded-lg" src="https://docequintalconfeitaria.com/wp-content/uploads/2023/06/brownie-vender-scaled.jpg" alt="">
+                </div>
+            </div>
+</div>
+    </section>
+
+    <footer class="w-full bg-gray-200 mt-10 p-12">
+    <div class="flex justify-around items-center">
+
+        <div class=" flex flex-col p-5">
+            <h1 class="font-bold text-pink-700 text-2xl">Contato</h1>
+            <ul>
+               <li><a href="">📍Rua das Flores, 123</a></li>
+               <li><a href="">📞(18) 99777-1212</a></li>
+               <li><a href="">✉️doucuras_da_Liv@gmail.com</a></li>
+            </ul>
+        </div>
+
+        <div class="flex p-3 ">
+            <h1 class="font-bold text-pink-700 text-2xl">Siga-nos</h1> 
+            <a href=""><img class="w-15" src="https://svgsilh.com/png-1024/2071331.png" alt=""></a>
+            <a href=""><img class="w-10" src="https://icones.pro/wp-content/uploads/2021/02/instagram-icone-noir.png" alt=""></a>
+        </div>
+
+    </div>
+    <hr class="text-gray-300 m-3"> 
+    <p class="mt-10 mb-1 text-gray-500 flex justify-center items-center">©2025 - Douçuras da Liv. 
+        Todos os Direitos Reservados</p>
+    </footer>
+</body>
+</html>

@@ -63,3 +63,8 @@ btnProximo.addEventListener("click", () =>{
 
 // Inicializando carrossel
 atualizarCarrossel();
+
+function botaoSair(){
+    confirm(`Certeza que deseja sair?`)
+        
+}
